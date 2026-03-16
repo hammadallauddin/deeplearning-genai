@@ -1,0 +1,15 @@
+import os
+from dotenv import load_dotenv, find_dotenv
+
+def load_env():
+    _ = load_dotenv(find_dotenv())
+
+def get_gemini_api_key():
+    load_env()
+    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    return gemini_api_key
+
+def get_gemini_model():
+    load_env()
+    gemini_model = os.getenv("GEMINI_MODEL")
+    return gemini_model
